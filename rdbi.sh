@@ -18,7 +18,7 @@ if [ -f /etc/lsb-release ]; then
     sudo apt-get update
     sudo apt-get install -y rethinkdb
   fi
-else if [ cat /etc/issue*]; then
+elif [ cat /etc/issue*]; then
   # CentOS/RedHat
   if [[ $(rpm -q --queryformat '%{VERSION}' centos-release) = *6* ]]; then
     # CentOS 6
@@ -31,7 +31,7 @@ else if [ cat /etc/issue*]; then
     sudo wget http://download.rethinkdb.com/centos/7/`uname -m`/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
     sudo yum install rethinkdb
   fi
-else if [ -f "/etc/arch-release" ]; then
+elif [ -f "/etc/arch-release" ]; then
 	# Arch Linux
    echo "⯈ Installing RethinkDB for Arch Linux"
 	pacman -S rethinkdb
