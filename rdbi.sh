@@ -33,7 +33,7 @@ else if [ cat /etc/issue*]; then
   fi
 else if [ -f "/etc/arch-release" ]; then
 	# Arch Linux
-    echo "⯈ Installing RethinkDB for Arch Linux"
+   echo "⯈ Installing RethinkDB for Arch Linux"
 	pacman -S rethinkdb
 else
   echo "Linux Distribution not Supported!"
