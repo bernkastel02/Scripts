@@ -25,12 +25,12 @@ elif cat /etc/issue*; then
   if [[ $(rpm -q --queryformat '%{VERSION}' centos-release) = *6* ]]; then
     # CentOS 6
     echo "⯈ Installing RethinkDB for CentOS 6"
-    sudo wget https://download.rethinkdb.com/centos/6/`uname -m`/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
+    sudo wget https://download.rethinkdb.com/centos/6/"$(uname -m)"/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
     sudo yum install rethinkdb
   else
     # RHEL/CentOS 7
     echo "⯈ Installing RethinkDB for RHEL and RHEL-base Distributions."
-    sudo wget http://download.rethinkdb.com/centos/7/`uname -m`/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
+    sudo wget http://download.rethinkdb.com/centos/7/"$(uname -m)"/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
     sudo yum install rethinkdb
   fi
 elif [ -f "/etc/arch-release" ]; then
