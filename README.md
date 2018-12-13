@@ -7,15 +7,17 @@ Useful scripts for anyone to use
 
 ##### Debian
 * Ubuntu
-* Raspbian
+* Raspbian*
 * Debian
 
 ##### RHEL
-* CentOS 6
-* CentOS 7
-* Fedora
-* Arch Linux
+* CentOS 6*
+* CentOS 7*
+* Fedora*
+* Arch Linux*
 * Amazon Linux
+
+###### * = Untested
 
 ##### Installation
 ```sh
