@@ -18,7 +18,7 @@ if [ -f /etc/lsb-release ]; then
     sudo apt-get update
     sudo apt-get install -y rethinkdb
   fi
-elif [ cat /etc/issue*]; then
+elif [ $(cat /etc/issue*) ]; then
   # CentOS/RedHat
   if [[ $(rpm -q --queryformat '%{VERSION}' centos-release) = *6* ]]; then
     # CentOS 6
