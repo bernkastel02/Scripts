@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # RethinkDB Linux Installation Script
 #   by RethinkDB
 #   Globalized by TRPGDA (Prixyn)
@@ -18,11 +20,11 @@ if [ -f /etc/lsb-release ]; then
     sudo apt-get update
     sudo apt-get install -y rethinkdb
   fi
-elif [ $(cat /etc/issue*) ]; then
+elif cat /etc/issue*; then
   # CentOS/RedHat
   if [[ $(rpm -q --queryformat '%{VERSION}' centos-release) = *6* ]]; then
     # CentOS 6
-   	echo "⯈ Installing RethinkDB for CentOS 6"
+    echo "⯈ Installing RethinkDB for CentOS 6"
     sudo wget https://download.rethinkdb.com/centos/6/`uname -m`/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
     sudo yum install rethinkdb
   else
