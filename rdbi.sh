@@ -26,15 +26,15 @@ elif [ -f /etc/redhat-release ]; then
 			# RHEL/CentOS 7
     	echo "⯈ Installing RethinkDB for RHEL/CentOS 7"
     	sudo wget http://download.rethinkdb.com/centos/7/"$(uname -m)"/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
-    	sudo yum update
-    	sudo yum install -y rethinkdb
+    sudo yum -y update
+    sudo yum -y install rethinkdb
 			;;
 		"Red Hat Enterprise Linux release 6."*|"CentOS release 6."*|"Scientific Linux release 6."*)
 			# RHEL/CentOS 6
     	echo "⯈ Installing RethinkDB for CentOS 6"
     	sudo wget https://download.rethinkdb.com/centos/6/"$(uname -m)"/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
-    	sudo yum update
-   	 	sudo yum install -y rethinkdb
+    sudo yum -y update
+    sudo yum -y install rethinkdb
 			;;
 		*)
 			# Unsupported RHEL Version
@@ -45,8 +45,8 @@ elif [ -f /etc/system-release ]; then
 	# Amazon Linux
     echo "⯈ Installing RethinkDB for Amazon Linux"
     sudo wget http://download.rethinkdb.com/centos/7/"$(uname -m)"/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
-    sudo yum update -y
-    yes | sudo yum install rethinkdb
+    sudo yum -y update
+    sudo yum -y install rethinkdb
     echo "Installed!"
 elif [ -f "/etc/arch-release" ]; then
 	# Arch Linux
