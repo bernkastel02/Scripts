@@ -45,8 +45,8 @@ elif [ -f /etc/system-release ]; then
 	# Amazon Linux
     echo "⯈ Installing RethinkDB for Amazon Linux"
     sudo wget http://download.rethinkdb.com/centos/7/"$(uname -m)"/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
-    sudo yum update
-    sudo yum install rethinkdb
+    sudo yum update -y
+    sudo yum install -y rethinkdb
     echo "Installed!"
 elif [ -f "/etc/arch-release" ]; then
 	# Arch Linux
