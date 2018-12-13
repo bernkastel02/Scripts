@@ -47,6 +47,7 @@ elif [ -f /etc/system-release ]; then
     sudo wget http://download.rethinkdb.com/centos/7/"$(uname -m)"/rethinkdb.repo -O /etc/yum.repos.d/rethinkdb.repo
     sudo yum update
     sudo yum install rethinkdb
+    echo "Installed!"
 elif [ -f "/etc/arch-release" ]; then
 	# Arch Linux
    echo "⯈ Installing RethinkDB for Arch Linux"
